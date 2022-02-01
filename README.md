@@ -16,7 +16,7 @@ Let the turtle draw images according to the func exp you typed.
 
   例如:
 
-  - `<2>` 表示 `√2`
+  - `<2>` 表示 $\sqrt{2}$
 
 - 幂运算使用 `^` 号
   或使用 Python 内建的 `**` 运算符

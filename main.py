@@ -3,6 +3,7 @@ import turtle as tt
 
 print("用法详见仓库 README")
 print("仓库地址 https://github.com/freeze-dolphin/function_visualizer")
+
 exp = input("f(x) = ")
 inp = input("Range (l:r): ")
 vld = input("process validation (n): ")
