@@ -2,6 +2,23 @@
 
 Let the turtle draw images according to the func exp you typed.
 
+## Inputs
+
+- 输入的范围是以冒号分隔的闭区间  
+  不输入默认为 `[-200, 200]`
+
+  例如:
+
+  - `Range (l:r): 1:4` 可以代表 `1 2 3 4`
+
+- 一般不需要阻止自动检查表达式  
+  默认为开启
+
+  例如:
+
+  - `process validation (n): n` 会关闭自检  
+    因此如果表达式在解析过程出错会以报错的形式输出在控制台
+
 ## Attentions
 
 如果计算出错画出来的是红线  
@@ -42,22 +59,13 @@ Let the turtle draw images according to the func exp you typed.
 
   - `(2 / (2 _ (3 + 2) ^ 3))` 等价于 `{2 / [2 _ (3 + 2) ^ 3]}`
 
-- 输入的范围是以冒号分隔的闭区间  
-  不输入默认为 `[-200, 200]`
-
-  例如:
-
-  - `Range (l:r): 1:4` 可以代表 `1 2 3 4`
-
 ## Try
 
 试试输入这几个表达式:
 
-- ```python
-  int(x \* 0.01 + 0.5) / 0.01
-  `
+- ```
+  int(x * 0.01 + 0.5) / 0.01
   ```
-- ```python
-  $randint(x - 100, x + 100) _ #sin(x _ 100)
-  `
+- ```
+  $randint(x - 100, x + 100) - #sin(x * 100)
   ```

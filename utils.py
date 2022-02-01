@@ -7,7 +7,7 @@ tt.colormode(255)
 
 class RawExpression:
 
-    def replace_chain(orig: str) -> str:
+    def replace_chain(self, orig: str) -> str:
         return (orig
                 .replace("^", "**")
                 .replace("<", "math.sqrt(")
