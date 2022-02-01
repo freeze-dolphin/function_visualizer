@@ -7,8 +7,20 @@ tt.colormode(255)
 
 class RawExpression:
 
+    def replace_chain(orig: str) -> str:
+        return (orig
+                .replace("^", "**")
+                .replace("<", "math.sqrt(")
+                .replace(">", ")")
+                .replace("#", "math.")
+                .replace("[", "(")
+                .replace("{", "(")
+                .replace("]", ")")
+                .replace("}", ")")
+                .replace("$", "random."))
+
     def __init__(self, exp: str):
-        self.exp = exp
+        self.exp = self.replace_chain(exp)
         self.valid = True
 
     def validate(self, x: float):
@@ -32,13 +44,10 @@ class RawExpression:
             return 0
 
     def eval(self, x) -> float:
-        return eval(replace_chain(self.exp).replace("x", str(x)))
+        return eval(self.exp)
+
 
 def draw_point(x: int, y: int, down: bool):
     if down:
         tt.pendown()
     tt.goto(x, y)
-
-
-def replace_chain(orig: str) -> str:
-    return orig.replace("^", "**").replace("<", "math.sqrt(").replace(">", ")").replace("#", "math.").replace("[", "(").replace("{", "(").replace("]", ")").replace("}", ")").replace("$", "random.")
