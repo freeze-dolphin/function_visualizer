@@ -4,12 +4,12 @@ Let the turtle draw images according to the func exp you typed.
 
 ## Inputs
 
-- 输入的范围是以冒号分隔的闭区间  
+- 输入的范围是以绝对值符号分隔的闭区间  
   不输入默认为 `[-200, 200]`
 
   例如:
 
-  - `Range (l:r): 1:4` 可以代表 `1 2 3 4`
+  - `Range (l:r): 1|4` 可以代表 `1 2 3 4`
 
 - 一般不需要阻止自动检查表达式  
   默认为开启
