@@ -1,6 +1,10 @@
 import utils
 import turtle as tt
 
+# 绘图加速
+tt.delay(0)
+tt.speed(100)
+
 print("用法详见仓库 README")
 print("仓库地址 https://github.com/freeze-dolphin/function_visualizer")
 
